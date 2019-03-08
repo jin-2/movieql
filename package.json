@@ -5,6 +5,17 @@
   "repository": "https://github.com/jin-2/movieql.git",
   "license": "MIT",
   "dependencies": {
+    "@babel/polyfill": "^7.2.5",
     "graphql-yoga": "^1.17.4"
+  },
+  "scripts": {
+    "start": "nodemon --exec babel-node index.js"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.4",
+    "@babel/node": "^7.0.0",
+    "@babel/preset-env": "^7.3.4",
+    "babel-core": "^7.0.0-0"
   }
 }
