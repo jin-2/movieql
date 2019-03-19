@@ -50,8 +50,10 @@ const people = [
 ];
 
 export const getById = id => {
-    const filteredPeople = people.filter(person => person.id === id);
-    return filteredPeople;
+    const filteredPeople = people.filter(
+        person => String(person.id) === String(id)
+    );
+    return filteredPeople[0];
 }
 
 export default people;
