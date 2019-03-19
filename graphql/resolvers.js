@@ -1,13 +1,10 @@
-// query를 resolve
-const sujin = {
-    name: "sujin",
-    age: 99,
-    gender: "female"
-}
+import people from './db';
 
+// query를 resolve
 const resolver = {
     Query: {
-        person: ()=> sujin
+        people: () => people,
+        // person: () => person
     }
 }
 
