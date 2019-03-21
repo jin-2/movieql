@@ -1,14 +1,13 @@
-import people, { getById } from './db';
+import { getById, getMovies } from './db';
 
 // query를 resolve
 const resolver = {
     Query: {
-        people: () => people,
-        // person: () => getById()
-        // person: (_, args) => {
-        //     console.log(args);
-        // }
-        person: (_, {id}) => getById(id)
+        movies: () => getMovies(),
+        movie: (_, {id}) => getById(id)
+    },
+    Mutation: {
+        addMovie: (_, {name, score}) => {}
     }
 }
 
