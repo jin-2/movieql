@@ -1,4 +1,4 @@
-import { getById, getMovies, addMovie } from './db';
+import { getById, getMovies, addMovie, deleteMovie } from './db';
 
 // query를 resolve
 const resolver = {
@@ -7,7 +7,8 @@ const resolver = {
         movie: (_, {id}) => getById(id)
     },
     Mutation: {
-        addMovie: (_, {name, score}) => addMovie(name, score)
+        addMovie: (_, {name, score}) => addMovie(name, score),
+        deleteMovie: (_, {id}) => deleteMovie(id)
     }
 }
 
