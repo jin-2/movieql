@@ -6,7 +6,8 @@
   "license": "MIT",
   "dependencies": {
     "@babel/polyfill": "^7.2.5",
-    "graphql-yoga": "^1.17.4"
+    "graphql-yoga": "^1.17.4",
+    "node-fetch": "^2.3.0"
   },
   "scripts": {
     "start": "nodemon --exec babel-node index.js"
