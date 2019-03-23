@@ -3,13 +3,9 @@ import { getMovies } from "./db";
 // query를 resolve
 const resolver = {
   Query: {
-    movies: () => getMovies()
-    // movie: (_, {id}) => getById(id)
+    // "_": variable name으로 사용하지 않아서 "_" 언더바를 사용함.
+    movies: (_, {limit, rating}) => getMovies(limit, rating)
   }
-  // Mutation: {
-  //     addMovie: (_, {name, score}) => addMovie(name, score),
-  //     deleteMovie: (_, {id}) => deleteMovie(id)
-  // }
 };
 
 export default resolver;
